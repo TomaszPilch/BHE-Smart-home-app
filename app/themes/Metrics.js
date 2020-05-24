@@ -13,6 +13,8 @@ const metrics = {
   smallMargin: 10,
   screenWidth,
   screenHeight,
+  headerHeight: 130,
+  bottomBarHeight: 50,
   icons: {
     m: 32,
     l: 48,
@@ -20,6 +22,7 @@ const metrics = {
     xxl: 86,
   },
   image: {
+    s: 64,
     m: 128,
   },
 }

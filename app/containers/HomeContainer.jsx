@@ -1,10 +1,11 @@
 // @flow
 import React from 'react'
-import { Text } from 'react-native'
-import { Header } from 'react-native-elements'
+import { Text, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import TileList from '../components/TileList/TileList'
 import Colors from './../themes/Colors'
+import Header from '../components/Header/Header'
+import ApplicationStyles from '../themes/ApplicationStyles'
 
 const tileList = [
   {
@@ -49,13 +50,10 @@ class HomeContainer extends React.Component<HomeContainerProps> {
   render() {
     return (
       <SafeAreaView>
-        <Header
-          backgroundColor={Colors.transparent}
-          centerComponent={{ text: 'Home TODO', style: { fontSize: 24, color: Colors.secondaryLight } }}
-          rightComponent={{ text: 'aa', icon: 'home', style: { color: '#fff' } }}
-          style={{ border: 0 }}
-        />
-        <TileList list={tileList} />
+        <Header image="tv" title="Living room" />
+        <View style={ApplicationStyles.containerWithHeaderAndBottomBar}>
+          <TileList list={tileList} />
+        </View>
       </SafeAreaView>
     )
   }

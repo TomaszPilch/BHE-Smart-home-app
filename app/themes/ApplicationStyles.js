@@ -13,6 +13,9 @@ export default StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
   },
+  containerWithHeaderAndBottomBar: {
+    height: Metrics.screenHeight - Metrics.headerHeight - Metrics.bottomBarHeight - Metrics.baseMargin,
+  },
   spinnerContainer: {
     position: 'absolute',
     top: 0,

@@ -1,5 +1,6 @@
 // @flow
 import Colors from './Colors'
+import Images from './Images'
 import Metrics from './Metrics'
 
 export type ThemeType = {
@@ -20,6 +21,7 @@ export type ThemeType = {
     border: string,
   },
   metrics: Object,
+  images: Object,
 }
 
 const DarkTheme: ThemeType = {
@@ -31,6 +33,7 @@ const DarkTheme: ThemeType = {
     border: '',
   },
   metrics: Metrics,
+  images: Images,
 }
 
 export default {
