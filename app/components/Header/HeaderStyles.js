@@ -10,17 +10,21 @@ export default ({ colors, metrics }) =>
     },
     headerCenterWrapper: {
       flex: 1,
-      backgroundColor: colors.surface,
+      backgroundColor: colors.transparent,
       width: metrics.screenWidth - metrics.doubleBaseMargin,
       borderRadius: 5,
       alignItems: 'center',
       justifyContent: 'space-between',
       flexDirection: 'row',
     },
+    headerCenterWrapperReverse: {
+      flexDirection: 'row-reverse',
+    },
     logoStyles: {
       width: metrics.image.s,
       height: metrics.image.s,
-      marginLeft: metrics.baseMargin,
+      marginHorizontal: metrics.baseMargin,
+      justifyContent: 'center',
     },
     title: {
       flex: 1,

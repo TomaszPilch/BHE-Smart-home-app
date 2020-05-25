@@ -10,7 +10,9 @@ import HeaderCenterPart from './HeaderCenterPart'
 import Colors from '../../themes/Colors'
 
 type HeaderProps = {
+  backButton?: boolean,
   image: string,
+  onBackButtonPress?: Function,
   title: string,
 }
 
@@ -22,7 +24,14 @@ const Header = (props: HeaderProps) => {
     <HeaderElements
       ViewComponent={View}
       backgroundColor={Colors.transparent}
-      centerComponent={<HeaderCenterPart image={props.image} title={props.title} />}
+      centerComponent={
+        <HeaderCenterPart
+          backButton={props.backButton}
+          image={props.image}
+          onBackButtonPress={props.onBackButtonPress}
+          title={props.title}
+        />
+      }
       containerStyle={styles.headerContainer}
     />
   )

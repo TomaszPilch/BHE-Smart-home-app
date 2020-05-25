@@ -8,6 +8,7 @@ import HomeContainer from '../containers/HomeContainer'
 
 // theme
 import Colors from '../themes/Colors'
+import HomeStackNavigator from './HomeStackNavigator'
 
 const Tab = createBottomTabNavigator()
 
@@ -35,7 +36,7 @@ const handleGetScreenOptions = ({ route }) => ({
 
 const TabNavigator = () => (
   <Tab.Navigator screenOptions={handleGetScreenOptions}>
-    <Tab.Screen component={HomeContainer} name="home" />
+    <Tab.Screen component={HomeStackNavigator} name="home" />
     <Tab.Screen component={HomeContainer} name="automation" />
     <Tab.Screen component={HomeContainer} name="favourite" />
     <Tab.Screen component={HomeContainer} name="notifications" />

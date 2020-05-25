@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { ScrollView } from 'react-native'
+import { ScrollView, StyleSheet } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 
 import TileWithIcon from '../TileWithIcon/TileWithIcon'
@@ -14,10 +14,20 @@ const TileList = (props) => {
     return null
   }
 
+  let contentContainerStyle = styles.scrollView
+  if (props.scrollViewStyles) {
+    contentContainerStyle = StyleSheet.compose(contentContainerStyle, props.scrollViewStyles)
+  }
+
   return (
-    <ScrollView contentContainerStyle={styles.scrollView}>
+    <ScrollView style={{ flex: 0 }} contentContainerStyle={contentContainerStyle} horizontal={props.horizontal}>
       {props.list.map((item) => (
-        <TileWithIcon icon={item.icon} key={item.id} secondaryText={item.secondaryText} text={item.text} />
+        <TileWithIcon
+          key={item.id}
+          {...item}
+          onPress={props.onPress}
+          wrapperStyles={props.horizontal ? styles.itemHorizontal : null}
+        />
       ))}
     </ScrollView>
   )

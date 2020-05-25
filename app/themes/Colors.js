@@ -1,4 +1,4 @@
-const colors = {
+const darkColors = {
   primary: '#64b5f6',
   primaryLight: '#9be7ff',
   primaryDark: '#2286c3',
@@ -6,10 +6,10 @@ const colors = {
   secondaryLight: '#ffbb93',
   secondaryDark: '#c75b39',
   primaryText: '#ffffff',
-  secondaryText: '#333',
+  secondaryText: '#666',
   background: '#000000',
   surface: '#121212',
   transparent: 'transparent',
 }
 
-export default colors
+export default darkColors
