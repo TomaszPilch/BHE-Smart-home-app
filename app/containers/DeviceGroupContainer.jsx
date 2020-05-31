@@ -5,6 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import Header from '../components/Header/Header'
 import ApplicationStyles from '../themes/ApplicationStyles'
 import TileList from '../components/TileList/TileList'
+import DeviceContainer from './DeviceContainer'
 
 const tileList = [
   {
@@ -51,11 +52,7 @@ class DeviceGroupContainer extends React.Component<DeviceGroupContainerProps> {
           <View>
             <TileList horizontal list={tileList} onPress={this.handleOnPress} />
           </View>
-          <ScrollView>
-            <View style={{ flex: 1, backgroundColor: 'red' }}>
-              <Text>aa</Text>
-            </View>
-          </ScrollView>
+          <DeviceContainer />
         </View>
       </SafeAreaView>
     )
